@@ -19,7 +19,7 @@ public class GravityE : MonoBehaviour
         Vector3 direction = rb.position - otherRb.position;
         float distance = direction.magnitude;
         float forceMagni = G * ((rb.mass * otherRb.mass) / Mathf.Pow(distance, 2));
-        vector3 FinalForce = forceMagni * direction.normalized;
+        Vector3 FinalForce = forceMagni * direction.normalized;
 
         //Addforce
         otherRb.AddForce(FinalForce);
